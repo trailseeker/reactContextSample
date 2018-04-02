@@ -5,35 +5,29 @@ import { View, Text, TouchableOpacity } from 'react-native';
 
 global.AppContext = React.createContext();
 
+ContextProvider(AppComponent, StoreObjects){
+  return (
+    <myContext.Consumer>
+    {(context) => (
+      <AppComponent {...props}             
+        clockInfo={context.state.clock}
+        valueInfo={context.state.value}
+      />
+    )}
 
-class ContextProvider extends Component {
+    </myContext.Consumer>
+  );
+};
 
-  state = {
-    name: 'Riri',
-    value: 0,
-    clock: '12:01'
-  }
-
-
-  render = () => {
-
-    const AppContext = global.AppContext;
-    return (
-      <AppContext.Provider
-        value={{
-          state: this.state,
-          addvalue: ()=>{
-            this.setState({
-              value : this.state.value + 1
-            })
-          }
-        }}
-      >
-        {this.props.children}
-      </AppContext.Provider>
-    );
-  }
-
-
-}
 export default ContextProvider;
+
+
+export default props => (
+  <myContext.Consumer>
+    {(context) => (
+      <Clock {...props}             
+        clockInfo={context.state.clock}
+        valueInfo={context.state.value}
+      />
+    )}
+  </myContext.Consumer>

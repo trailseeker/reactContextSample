@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/admin/repo/ReactContext/node_modules/react-native/third-party/folly-2016.09.26.00/folly/Unicode.cpp \
-  /Users/admin/repo/ReactContext/node_modules/react-native/React/../third-party/folly-2016.09.26.00/folly/Unicode.h
+  /Users/admin/repo/reactContextSample/node_modules/react-native/third-party/folly-2016.09.26.00/folly/Unicode.cpp \
+  /Users/admin/repo/reactContextSample/node_modules/react-native/React/../third-party/folly-2016.09.26.00/folly/Unicode.h
